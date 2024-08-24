@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Reservation</title>
+</head>
+<body>
+<h1>Make a Reservation</h1>
+<form th:action="@{/orders/reservation/confirm}" method="post">
+    <input type="hidden" name="reservationNumber" th:value="${reservationNumber}" />
+    <p>Your reservation number is: <span th:text="${reservationNumber}"></span></p>
+    <button type="submit">Confirm Reservation</button>
+</form>
+</body>
+</html>

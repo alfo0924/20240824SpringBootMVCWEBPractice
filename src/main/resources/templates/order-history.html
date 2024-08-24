@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Order History</title>
+</head>
+<body>
+<h1>Order History</h1>
+<table>
+    <tr>
+        <th>Reservation Number</th>
+        <th>Created At</th>
+    </tr>
+    <tr th:each="reservation : ${reservations}">
+        <td th:text="${reservation.number}"></td>
+        <td th:text="${reservation.createdAt}"></td>
+    </tr>
+</table>
+</body>
+</html>
