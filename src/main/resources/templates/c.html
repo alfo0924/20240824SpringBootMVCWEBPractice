@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Page C</title>
+</head>
+<body>
+<h1>Page C</h1>
+<button onclick="showData()">View Data</button>
+<div id="dataContainer" style="display: none;">
+    <ul>
+        <li th:each="data : ${dataList}" th:text="${data.content}"></li>
+    </ul>
+</div>
+<a href="/b">Previous Page</a>
+<a href="/">Next Page</a>
+
+<script>
+    function showData() {
+        var container = document.getElementById('dataContainer');
+        container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    }
+</script>
+</body>
+</html>
